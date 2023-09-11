@@ -173,15 +173,37 @@ console.log(currentDate)
 // 8
 console.log(Math.ceil(10*(Math.random())))
 
- //no 9
 
- // 10
+
+ // 9
  function q10(a) {
   console.log(`${a} is my value`)
  }
  q10('Aaron')
 
+ // 10
+function ex10function(){
+  let user={name:'Aaron',age: 48,occupation:'Developer',};
+  for (i in user){
+      console.log(user[i]);
+  }
+}
+
  // 11
-
-
- // 12
+ 
+ 
+ function objSplitReturn(obj){
+  let arrayKeys=[];
+  arrayKeys=Object.keys(obj);
+  //console.log(arrayKeys);
+  let arrayKeysSorted=arrayKeys.sort();
+  console.log(arrayKeysSorted);
+  let arrayValuesSorted=[];
+  for (i in arrayKeysSorted){
+    let v=arrayKeysSorted[i];
+    arrayValuesSorted.push(obj[v]);
+       
+  }
+  console.log(arrayValuesSorted);
+ }
+ objSplitReturn({ a: 1, c: 2, b: 3 });
