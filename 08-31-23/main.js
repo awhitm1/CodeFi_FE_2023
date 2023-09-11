@@ -207,3 +207,57 @@ function ex10function(){
   console.log(arrayValuesSorted);
  }
  objSplitReturn({ a: 1, c: 2, b: 3 });
+
+ // 12
+ let stringEX12='The quick brown fox jumps over the lazy dog.';
+ //console.log(stringEX12.split(' ')); //testing
+  function reverseString12 (myString12){
+    let stringArray=myString12.split(' ');
+    let revArray=[];
+    for (i=stringArray.length-1;i>=0;i--){
+      revArray[(stringArray.length-1)-i]=stringArray[i];
+    }
+    return console.log(revArray);
+ }
+reverseString12(stringEX12);
+
+// 13
+let string13="'(', ')', ', ', '[', ']'";
+// No clue where to begin here
+
+
+
+
+// 14
+function isAnagram (a,b){
+  if (a.length != b.length) return false;
+  let arrayA=a.split("");
+  let arrayB=b.split("");
+  arrayA.sort();
+  arrayB.sort();
+  console.log(arrayA);
+  console.log(arrayB);
+  for (let i=0;i<arrayA.length;i++){
+    if (arrayA[i]!=arrayB[i]) return false;
+    
+  }return true;
+}
+console.log(isAnagram ('aaron','anora'));
+
+// 15
+function FizzBuzz(){
+  for (let i=1; i<=100; i++){
+    let z=i%3;
+    let y=i%5;
+    if (z && y == 0) {
+      console.log('FizzBuzz')
+    } else if (y==0){
+      console.log('Buzz')
+    } else if (z==0){
+      console.log('Fizz')
+    } else {
+    console.log(i)
+    };
+  }
+}
+FizzBuzz(); //something still slightly wrong && is not resolving correctly
