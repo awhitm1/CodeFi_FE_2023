@@ -249,7 +249,7 @@ function FizzBuzz(){
   for (let i=1; i<=100; i++){
     let z=i%3;
     let y=i%5;
-    if (z && y == 0) {
+    if ((z==0 && y== 0)) {
       console.log('FizzBuzz')
     } else if (y==0){
       console.log('Buzz')
@@ -260,4 +260,12 @@ function FizzBuzz(){
     };
   }
 }
-FizzBuzz(); //something still slightly wrong && is not resolving correctly
+console.groupCollapsed('FizzBuzz')
+FizzBuzz(); //something still slightly wrong && is not resolving correctly - figured it out!
+console.groupEnd();
+
+// 16
+
+function isPalindrome(myString16) {
+  myString16.split("");
+}
