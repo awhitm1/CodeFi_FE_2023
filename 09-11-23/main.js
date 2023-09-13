@@ -184,54 +184,92 @@
 // Ex 6 - all worked - in the other repo
 
 // Ex 7
-class Library {
-myLibrary=[];  
-  constructor (book){
-   this.book=book;   
-  }
-  addBook(book){
-    return this.myLibrary.push(this.book);
-  }
-  removeBook(book){
-    return this.myLibrary.pop(this.book);
-  }
-  catalog(book){
-    console.log(this.myLibrary);
-  }
 
-};
 
-class Book {
-  #isbn;
+// class Book {
+//   #isbn;
   
-  constructor(isbn,title,author,yearPublished){
-    this.#isbn=isbn;
-    this.title=title;
-    this.author=author;
-    this.yearPublished=yearPublished;
+//   constructor(isbn,title,author,yearPublished){
+//     this.#isbn=isbn;
+//     this.title=title;
+//     this.author=author;
+//     this.yearPublished=yearPublished;
+//   }
+
+// };
+
+// class Library {
+//   books;  
+//     constructor (books){
+//       this.books=books;
+//     }
+//     static addBook(book){
+//       return this.books.push(this.book);
+//     }
+//     static removeBook(book){
+//       return this.books.pop(this.book);
+//     }
+//     static catalog(book){
+//       console.log(this.books);
+//     }
+  
+//   };
+// book1=new Book(123,'Book1','me',2010);
+// book2=new Book(456,'Book2','you',2011);
+// book3=new Book(789,'Book3','him',2012);
+// book4=new Book(012,'Book4','her',2013);
+// book5=new Book(345,'Book5','they',2014);
+// book6=new Book(678,'Book6','them',2015);
+
+// console.groupCollapsed('Book Shelf');
+// console.log(book1);
+// console.log(book2);
+// console.log(book3);
+// console.log(book4);
+// console.log(book5);
+// console.log(book6);
+// console.groupEnd();
+
+
+// Library.addBook(book1);
+// Library.addBook(book3);
+// Library.addBook(book5);
+// Library.removeBook(book5);
+// Library.catalog();
+// Something still not right above
+//Ex 8
+class Student {
+  grades=[];
+  
+  constructor (name,grades){
+    this.name=name;
+    this.grades=grades;
   }
-
-};
-book1=new Book(123,'Book1','me',2010);
-book2=new Book(456,'Book2','you',2011);
-book3=new Book(789,'Book3','him',2012);
-book4=new Book(012,'Book4','her',2013);
-book5=new Book(345,'Book5','they',2014);
-book6=new Book(678,'Book6','them',2015);
-
-console.groupCollapsed('Book Shelf');
-console.log(book1);
-console.log(book2);
-console.log(book3);
-console.log(book4);
-console.log(book5);
-console.log(book6);
-console.groupEnd();
-
-alexandria= new Library();
-alexandria.addBook(book1);
-alexandria.addBook(book3);
-alexandria.addBook(book5);
-alexandria.removeBook(book5);
-alexandria.catalog();
-
+  
+  // addGrade (newGrade){
+  //   this.grades.push(newGrade);
+  // }
+  // avgGrade (){
+  //   let tot=0;
+  //   for (let number of this.grades){
+  //     tot+=number;
+  //   }
+  //   let avg=tot/this.grades.length;
+  //   console.log(avg);
+  //}
+  addGrade = (grade) => this.grades.push(grade);
+  avgGrade = () => {
+    let tot=0;
+    for (let number of this.grades){
+      tot+=number;
+    }
+    let avg=tot/this.grades.length;
+    console.log(avg);
+  }
+}
+student1= new Student('Aaron',[92,94,88,99]);
+console.log(student1);
+student1.avgGrade();
+student1.addGrade(55);
+student1.avgGrade();
+console.log(student1);
