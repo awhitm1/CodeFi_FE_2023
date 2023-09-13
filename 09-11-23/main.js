@@ -201,14 +201,14 @@ class Book {
 class Library {
   //  books=[];
     constructor (){
-      let books=[];
-      this.books=books;
+      //let books=[];
+      this.books=[];
     }
     addBook(book){
-      return this.books.push(this.book);
+      this.books.push(book);
     }
     removeBook(book){
-      return this.books.pop(this.book);
+      this.books.pop(this.book);
     }
     catalog(book){
       console.log(this.books)
@@ -240,38 +240,43 @@ alexandria.removeBook(book5);
 alexandria.catalog();
 // Something still not right above
 //Ex 8
-// class Student {
-//   grades=[];
+class Student {
+  grades=[];
   
-//   constructor (name,grades){
-//     this.name=name;
-//     this.grades=grades;
-//   }
+  constructor (name,grades){
+    this.name=name;
+    this.grades=grades;
+  }
   
-//   // addGrade (newGrade){
-//   //   this.grades.push(newGrade);
-//   // }
-//   // avgGrade (){
-//   //   let tot=0;
-//   //   for (let number of this.grades){
-//   //     tot+=number;
-//   //   }
-//   //   let avg=tot/this.grades.length;
-//   //   console.log(avg);
-//   //}
-//   addGrade = (grade) => this.grades.push(grade);
-//   avgGrade = () => {
-//     let tot=0;
-//     for (let number of this.grades){
-//       tot+=number;
-//     }
-//     let avg=tot/this.grades.length;
-//     console.log(avg);
-//   }
-// }
-// student1= new Student('Aaron',[92,94,88,99]);
-// console.log(student1);
-// student1.avgGrade();
-// student1.addGrade(55);
-// student1.avgGrade();
-// console.log(student1);
+  // addGrade (newGrade){
+  //   this.grades.push(newGrade);
+  // }
+  // avgGrade (){
+  //   let tot=0;
+  //   for (let number of this.grades){
+  //     tot+=number;
+  //   }
+  //   let avg=tot/this.grades.length;
+  //   console.log(avg);
+  //}
+  addGrade = (grade) => this.grades.push(grade);
+  avgGrade = () => {
+    // let tot=0;
+    // for (let number of this.grades){
+    //   tot+=number;
+    // }
+    // let avg=tot/this.grades.length;
+    return this.grades.reduce((sum,grade)=> sum + grade, 0) /this.grades.length;
+  }
+}
+const student1= new Student('Aaron',[92,94,88,99]);
+console.log(student1.grades);
+console.log(student1.avgGrade());
+console.log(student1.addGrade(55));
+console.log(student1.grades);
+console.log(student1.avgGrade());
+console.log(student1.addGrade(80));
+console.log(student1.addGrade(75));
+console.log(student1.addGrade(100));
+console.log(student1.avgGrade());
+console.log(student1.grades);
