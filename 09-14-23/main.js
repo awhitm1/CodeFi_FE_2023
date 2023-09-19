@@ -202,7 +202,15 @@ class Subject {
 class Observer {
 	update(data) {
 		// TODO: Handle the received data. If it's an error message, log it.
-
+    const isValidJSON = data => {
+      try {
+        JSON.parse(data);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+    console.log(isValidJSON(data));
 		// If it's the list of posts, destructure and log the title of the first post.
     console.log(data);
 	}
